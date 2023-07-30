@@ -1,8 +1,9 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
 import { onMounted, ref } from "vue";
-import { LottieAnimation } from "lottie-web-vue";
-import WatermelonJSON from "/public/img/robot.json";
+import style from "/resources/css/index.css"
+// import { LottieAnimation } from "lottie-web-vue";
+// import WatermelonJSON from "/public/img/robot.json";
 
 // Menginisialisasi variabel anim sebagai referensi Vue
 let anim = ref();
@@ -107,35 +108,71 @@ const props = defineProps({
             </div>
         </div>
     </nav>
-    <section class="bg-white dark:bg-gray-900">
-        <div class="py-1 px-4 mx-auto max-w-screen-xl  lg:py-16 grid lg:grid-cols-2 gap-12 lg:gap-16">
-            <div class="flex flex-col justify-center">
-                <h1
-                    class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-                    {{ slider.judul }}</h1>
-                <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
-                    {{ slider.konten }}</p>
-                <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-                    <a href="#"
-                        class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                        Get started <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                    <a href="#"
-                        class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                        Learn more </a>
-                </div>
-            </div>
-            <div>
-                <LottieAnimation :animation-data="WatermelonJSON" :auto-play="true" :height="100" :loop="true" :speed="1"
-                    ref="anim" />
+    <section class="home">
+        <div class="right">
+            <div id="navbar-default">
+                <ul class="leftNavbar">
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-dark md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-dark md:dark:hover:bg-transparent"
+                            aria-current="page">Terkini</a>
+                    </li>
+                    <li>
+                        <a href="#game"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-dark md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-dark md:dark:hover:bg-transparent">
+                            Game</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-dark md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-dark md:dark:hover:bg-transparent">
+                            Top Up</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-dark md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-dark md:dark:hover:bg-transparent">
+                            Hot Info</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-dark md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-dark md:dark:hover:bg-transparent">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
+        <div class="middel">
+            <div class="konten">
+                <video id="video"  autoplay  muted loop>
+                    <source src="img/Miya.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="diskripsi">
+                Miya 
+                <br>
+                Hero Mobile Lagend
+                <br>
+                <br>
+                Hero marksmen damage late Game, hero yang populer saat tim RRQ menggunakanya saat kejuaraan MPL
+                
+            </div>
+        </div>
+        <div class="middel">
+            <div class="konten">
+                <video id="video"  autoplay muted loop>
+                    <source src="img/Zilong.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="diskripsi">
+                Zilong
+                <br>
+                Hero Mobile Lagend
+                <br>
+                <br>
+                Hero Fighter yang memiliki moven speed tinggi saat skill ultimatenya diaktifkan
+            </div>
+        </div>
+        <div class="left">others</div>
     </section>
-    <section cclass="bg-grey-50" id="about">
+    <section class="bg-grey-50" id="about">
         <div class="mx-auto max-w-screen-xl container flex flex-col items-center py-16 md:py-20 lg:flex-row">
             <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
                 <h2 class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"> Who am I?
@@ -181,6 +218,9 @@ const props = defineProps({
                 </div>
             </div>
         </div>
+    </section>
+    <section class="" id="contact">
+        <p>anda dapat menghubungi</p>
     </section>
     <footer>
         <div className="mx-auto max-w-screen-xl  px-4 sm:px-6">
@@ -338,7 +378,7 @@ const props = defineProps({
                         </a>
                     </li>
                 </ul>
-                <div className="text-sm text-gray-600 mr-4">&copy; Amikom. All rights reserved.</div>
+                <div className="text-sm text-gray-600 mr-4">&copy; Meylani. jogja frontend 2023 </div>
             </div>
         </div>
 </footer></template>

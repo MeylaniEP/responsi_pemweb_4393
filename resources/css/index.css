@@ -1,0 +1,49 @@
+.home{
+    background-color: rgb(38, 9, 65);
+    color: aliceblue;
+    display: flex;
+}
+.home .right{
+    margin: 40px;
+    padding-bottom: 40px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.463);
+    border-radius: 10px;
+}
+.home .right .leftNavbar a{
+    margin : 50px auto 10px 45px;
+    color: aliceblue;
+    font-size: 1.2rem;
+}
+.home .right .leftNavbar a:hover{
+    color: aqua;
+}
+
+.home .middel{
+    margin: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.463);
+    border-radius: 10px;
+    width: 360px;
+}
+.home .middel .konten{
+    margin: 15px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#video {
+    position: absolute;
+    width: 93%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.home .middel .diskripsi{
+    margin: 10px;
+}
